@@ -18,12 +18,14 @@ def is_palindrome(string: str) -> bool:
 start = int('1' + '0' * (NUMBER_OF_DIGITS - 1))
 end = int('9' * NUMBER_OF_DIGITS)
 
-largest_palindrome = (0, 0, 0)
+largest_i = largest_j = largest_palindrome = 0
 for i in range(start, end + 1):
     for j in range(start, end + 1):
         product = i * j
         if is_palindrome(str(product)):
-            if product > largest_palindrome[2]:
-                largest_palindrome = (i, j, product)
+            if product > largest_palindrome:
+                largest_palindrome = product
+                largest_i = i
+                largest_j = j
 
-print(largest_palindrome)
+print(f'{largest_i}*{largest_j}={largest_palindrome}')
