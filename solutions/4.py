@@ -12,10 +12,7 @@ NUMBER_OF_DIGITS = 3
 
 
 def is_palindrome(string: str) -> bool:
-    for i in range(0, len(string) // 2):
-        if string[i] != string[(i + 1) * -1]:
-            return False
-    return True
+    return string == string[::-1]
 
 
 start = int('1' + '0' * (NUMBER_OF_DIGITS - 1))
