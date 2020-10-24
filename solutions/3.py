@@ -1,6 +1,8 @@
 from math import sqrt
 from typing import List
 
+from funcs.math import is_prime
+
 """
     Project Euler: Largest prime factor (Problem 3)
     https://projecteuler.net/problem=3
@@ -11,16 +13,6 @@ from typing import List
 """
 
 TARGET = 600851475143
-
-
-def is_prime(value: int) -> bool:
-    val = abs(value)
-    if val in [0, 1]:
-        return False
-    for potential_factor in range(2, int(sqrt(val)) + 1):
-        if val % potential_factor == 0:
-            return False
-    return True
 
 
 def get_prime_factors(value: int) -> List[int]:

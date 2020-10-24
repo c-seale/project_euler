@@ -1,5 +1,6 @@
-from math import sqrt
 from sys import maxsize
+
+from funcs.math import is_prime
 
 """
     Project Euler: 10001st prime (Problem 7)
@@ -11,16 +12,6 @@ from sys import maxsize
 """
 
 TARGET_PRIME_INDEX = 10001
-
-
-def is_prime(value: int) -> bool:
-    val = abs(value)
-    if val in [0, 1]:
-        return False
-    for potential_factor in range(2, int(sqrt(val)) + 1):
-        if val % potential_factor == 0:
-            return False
-    return True
 
 
 def get_prime_by_index(target_index: int) -> int:
