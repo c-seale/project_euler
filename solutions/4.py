@@ -1,5 +1,6 @@
 """
     Project Euler: Largest palindrome product (Problem 4)
+    https://projecteuler.net/problem=4
 
 
     A palindromic number reads the same both ways. The largest palindrome made from the product of
